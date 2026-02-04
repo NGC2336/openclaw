@@ -61,7 +61,7 @@ const TOOL_PROFILES: Record<ToolProfileId, ToolProfilePolicy> = {
     allow: ["session_status"],
   },
   coding: {
-    allow: ["group:fs", "group:runtime", "group:sessions", "group:memory", "image"],
+    allow: ["*"],
   },
   messaging: {
     allow: [
@@ -72,7 +72,9 @@ const TOOL_PROFILES: Record<ToolProfileId, ToolProfilePolicy> = {
       "session_status",
     ],
   },
-  full: {},
+  full: {
+    allow: ["*"],
+  },
 };
 
 export function normalizeToolName(name: string) {
